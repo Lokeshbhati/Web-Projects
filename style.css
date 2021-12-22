@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(37, 35, 35);
+    display: block
+}
+h3{
+    text-align: center;
+    color: white;
+    background-color: brown;
+    border: 2px red solid;
+
+}
+h1{
+    display: block;
+    font-size: 4rem;
+    color:crimson;
+    text-align: center;
+    height: 28px;
+    top:50px;
+}
+p{
+    display: block;
+    position: relative;
+    font-size: 2rem;
+    color:yellow;
+    text-align: center;
+    height: 100px;
+    top:46px;
+}
+.btn{
+    display:block;
+    position: relative;
+    height: 100px;
+    margin-left: 46%;
+    margin-bottom: 1%;
+
+}
+.container{
+    /* border: 2px blue solid; */
+    display: flex;
+    justify-content: center;
+}
+.dice {
+    flex-direction: row;
+    justify-content: center;
+    border: tomato 2px solid;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+
+}
+
+
+.dice .dicee{
+    display: block;
+    margin: 39px;
+    margin-left: 93px;
+    size: 1.4em;
+}
+
+/* #no1{
+    visibility: hidden;
+    position:absolute;
+    z-index: -1;
+}
+#no2{
+    visibility: hidden;
+    position:absolute;
+    z-index: -2;
+}
+#no3{
+    visibility: hidden;
+    position:absolute;
+    z-index: -3;
+}
+#no4{ 
+    visibility: hidden;
+    position:absolute;
+    z-index: -4;
+}
+#no5{
+    visibility: hidden;
+    position:absolute;
+    z-index:-5
+}
+#no6{
+    visibility: hidden;
+    position:absolute;
+    z-index: -6;
+}
+#no1-2{
+    visibility: hidden;
+    position:absolute;
+    z-index: -1;
+}
+#no2-2{
+    visibility: hidden;
+    position:absolute;
+    z-index: -2;
+}
+#no3-2{
+    visibility: hidden;
+    position:absolute;
+    z-index: -3;
+}
+#no4-2{
+    visibility: hidden;
+    position:absolute;
+    z-index: -4;
+}
+#no5-2{
+    visibility: hidden;
+    position:absolute;
+    z-index: -5;
+}
+#no6-2{
+    visibility: hidden;
+    position:absolute;
+    z-index: -6;
+} */
+

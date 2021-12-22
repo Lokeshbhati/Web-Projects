@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice game</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1><img src="./images/dice-logo1.png" style="position:relative;width: 100px; height: 100px;top:27px" alt="logo">
+        Dice Game</h1>
+        <br>
+        <p>Start the game by clicking the play button
+<br>
+<br>
+</p>
+<button class="btn" onclick="randomNo()" style="height: 30px; width :100px; border-radius: 10px;margin-top: -30px; color: black;">Play</button>
+        
+    <div class="container">
+        <div class="dice" id="1">
+            <h3>Player 1</h3>
+            <div class="dicee"><img src="./images/dice-1.png" alt=""></div>
+        </div>
+        <div class="dice" id="2">
+            <h3>Player 2</h3>
+            <div class="dicee"><img src="./images/dice-1.png" alt=""></div>
+        </div>
+    </div>
+    <script>
+        function randomNo(){
+        let randomNumber1 = Math.random();
+        let randomNumber2 = Math.random();
+        randomNumber1 *= 6;
+        randomNumber2 *= 6;
+        randomNumber1 = Math.floor(randomNumber1)+1;
+        randomNumber2 = Math.floor(randomNumber2)+1;
+        console.log(randomNumber1);
+        console.log(randomNumber2);
+
+        if(randomNumber1>randomNumber2){
+            document.getElementsByTagName("h1")[0].textContent = "Player1 Wins!!";
+            document.getElementsByTagName("p")[0].innerHTML = "Try Again...";
+        }
+        else if(randomNumber1<randomNumber2){
+            document.getElementsByTagName("h1")[0].textContent = "Player2 Wins!!";
+            document.getElementsByTagName("p")[0].innerHTML = "Try Again...";
+        }
+        else if(randomNumber1==randomNumber2){
+            document.getElementsByTagName("h1")[0].textContent = "Game Draw!!";
+            document.getElementsByTagName("p")[0].innerHTML = "Try Again...";
+        }
+
+        
+        var randomDiceImage1 = "dice-"+randomNumber1+".png";
+        var randomImageSource1 = "./images/"+randomDiceImage1;
+
+        var image1 = document.querySelectorAll(".dice .dicee img")[0];
+        image1.setAttribute("src", randomImageSource1);
+        
+        var randomDiceImage2 = "dice-"+randomNumber2+".png";
+        var randomImageSource2 = "./images/"+randomDiceImage2;
+
+        var image2 = document.querySelectorAll(".dice .dicee img")[1];
+        image2.setAttribute("src", randomImageSource2);
+    }
+
+    let btn = document.getElementsByTagName("button")[0];
+    console.log(btn);
+
+    </script>
+</body>
+</html>
